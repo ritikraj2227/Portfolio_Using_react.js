@@ -5,7 +5,6 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import "./App.css";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Navbar from "./Components/Navbar";
@@ -14,21 +13,24 @@ import Home from "./Components/Home";
 import Footer from "./Components/Footer";
 
 function App() {
- 
+
   return (
     <>
-      {}
+     
       <Router>
-        <Navbar/>
-        <Switch>        
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />                    
+        <Navbar />
+        <Switch> 
+                 
+          <Route exact path="/" component={ Home } />
+          <Route path="/about" component={About } />                    
           <Route path="/contact" component={Contact} />
           <Route path="/portfolio" component={Portfolio} />          
           <Redirect to="/" />
+
         </Switch>
         <Footer />
       </Router>
+
     </>
   );
 }
