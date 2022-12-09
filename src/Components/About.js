@@ -2,7 +2,20 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 export default function About() {
+
+  const clickDownload = () => {
+    fetch('resume.pdf').then(response => {
+      response.blob().then(blob =>{
+        const fileURL = window.URL.createObjectURL(blob);
+        let alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = 'resume.pdf';
+        alink.click();
+      })
+    })
+  }
   return (
+
     <>
     <div id="about-me" className="about">
       <div className="container">
@@ -22,6 +35,11 @@ export default function About() {
                 Check out my work <i className="fa fa-arrow-right" aria-hidden="true"></i>
               </Link>
             </p>
+             <p>
+             <Link onClick={clickDownload}>
+                Download My Resume <i className="fa fa-arrow-down" aria-hidden="true"></i>
+              </Link>
+             </p>
           </div>
 
           <div className="right-content">
@@ -72,15 +90,6 @@ export default function About() {
 
               <div className="progress-bar">
                 <div className="progress-text">
-                  <span>PHP</span>
-                  
-                </div>
-                <div className="progress-line">
-                  <span className="php"></span>
-                </div>
-              </div>
-              <div className="progress-bar">
-                <div className="progress-text">
                   <span>React JS</span>
                   
                 </div>
@@ -88,6 +97,17 @@ export default function About() {
                   <span className="react"></span>
                 </div>
               </div>
+
+              <div className="progress-bar">
+                <div className="progress-text">
+                  <span>PHP</span>
+                  
+                </div>
+                <div className="progress-line">
+                  <span className="php"></span>
+                </div>
+              </div>
+              
             </div>
           </div>
         </div>

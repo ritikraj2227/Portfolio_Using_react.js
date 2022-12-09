@@ -44,21 +44,37 @@ body {
 
 .nav-items li {
   list-style: none;
-  padding: 1.3rem;
+  padding: 1.5rem;
 }
 
 .nav-items a {
   text-decoration: none;
   font-size: 1.2rem;
-  padding: 0.2rem;
   color: #fbeceb;
 }
-.nav-items a:hover {
-  border-bottom: 2px solid #fbeceb;
+
+.nav-items a::after {
+  content: "";
+  position: relative;
+  width: 0%;
+  height: 2px;
+  display: block;
+  transition: all 0.5s ease;
+}
+.nav-items a:hover::after {
+  width: 110%;
+  height: 2px;
+  background-color: #fbeceb;
 }
 
-.activelink {
-  border-bottom: 2px solid #fbeceb;
+.nav-items .active::after{
+  content: "";
+  position: relative;
+  width: 110%;
+  height: 2px;
+  display: block;
+  background-color: #fbeceb;
+  
 }
 /* navbar end */
 
@@ -100,8 +116,20 @@ body {
   padding: 0.8rem;
   text-decoration: none;
 }
-.down-icon a:hover {
-  border-bottom: 1px solid;
+
+.down-icon a::after {
+  content: "";
+  position: relative;
+  width: 0%;
+  height: 2px;
+  display: block;
+  transition: all 0.5s ease;
+ 
+}
+.down-icon a:hover::after {
+  width: 110%;
+  height: 2px;
+  background-color: #feb249;
 }
 
 /* home content end */
@@ -145,12 +173,22 @@ body {
 .left-content a {
   color: #002447;
   text-decoration: none;
+  display: inline-block;
 }
 
-.left-content a:hover {
-  border-bottom: 2px solid #002447;
+.left-content a::after {
+  content: "";
+  position: relative;
+  width: 0%;
+  height: 2px;
+  display: block;
+  transition: all 0.5s ease;
 }
-
+.left-content a:hover::after {
+  width: 100%;
+  height: 2px;
+  background-color: #002447;
+}
 /* end left-content */
 
 /* right-content */
@@ -223,14 +261,14 @@ body {
 }
 
 .progress-line .js {
-  width: 50%;
+  width: 60%;
 }
 
 .progress-line .php {
   width: 50%;
 }
 .progress-line .react {
-  width: 40%;
+  width: 50%;
 }
 
 .-progress-bar .progress-line span::before {
@@ -271,14 +309,14 @@ body {
 }
 
 .progress-line .js::after {
-  content: "50%";
+  content: "60%";
 }
 
 .progress-line .php::after {
   content: "50%";
 }
 .progress-line .react::after {
-  content: "40%";
+  content: "50%";
 }
 
 /* end progress-bar */
@@ -370,10 +408,19 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.contact-msg:hover {
-  border-bottom: 2px solid;
+.contact-msg::after {
+  content: "";
+  position: relative;
+  width: 0%;
+  height: 2px;
+  display: block;
+  transition: all 0.5s ease;
 }
-
+.contact-msg:hover::after {
+  width: 105%;
+  height: 2px;
+  background-color: #feb249;
+}
 /* end portfolio */
 
 /* contact */
@@ -392,7 +439,7 @@ body {
 }
 
 .contact-content h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 500;
   color: #002447;
   padding-bottom: 0.5rem;
@@ -400,29 +447,53 @@ body {
 
 .contact-content .email {
   color: #fbeceb;
-  font-size: 1rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 2rem;
 }
-.contact-content .email a:hover {
-  border: none;
+.contact-content .email a {
+  text-decoration: none;
+  color: #002447;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+
+.contact-content .email a::after{
+  content: "";
+  position: relative;
+  width: 0%;
+  height: 2px;
+  display: block;
+  transition: all 0.5s ease;
+}
+
+.contact-content .email a:hover::after {
+  width: 100%;
+  height: 2px;
+  background-color: #002447;
 }
 
 .contact-content .links {
   color: #002447;
   padding: 0.5rem;
-  padding-bottom: 1.5rem;
-  font-size: 1rem;
 }
 
-.contact-content a {
+.link-icon a{
   text-decoration: none;
   color: #002447;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
+  display: inline-block;
 }
-
-.contact-content a:hover {
-  color: #004b96;
-  border-bottom: 2px solid #004b96;
+.link-icon a::after {
+  content: "";
+  position: relative;
+  width: 0%;
+  height: 2px;
+  display: block;
+  transition: all 0.5s ease;
+}
+.link-icon a:hover::after {
+  width: 100%;
+  height: 2px;
+  background-color: #002447;
 }
 
 /* end contact */

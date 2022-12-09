@@ -1,39 +1,42 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-export default function Navbar(props) {
+export default function Navbar() {
   return (
-    
     <>
       <nav className="navbar" id="navbar-menu">
         <div className="nav-content container">
           <div>
-            <h1 >
-              <Link to="/" className="nav-brand" id="navbar-brand">
-               Ritik Raj
-              </Link>
+            <h1>
+              <NavLink to="/home" className="nav-brand" id="navbar-brand">
+                Ritik Raj
+              </NavLink>
             </h1>
           </div>
 
           <ul className="nav-items">
-            <li >
-              <Link to="/about" className="nav-link"  > 
+            <li>
+              <NavLink to="/home" className="nav-NavLink">
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" className="nav-NavLink">
                 About
-              </Link>
+              </NavLink>
             </li>
 
-            <li >
-              <Link to="/portfolio" className="nav-link" >
+            <li>
+              <NavLink to="/portfolio" className="nav-NavLink">
                 Portfolio
-              </Link>
+              </NavLink>
             </li>
-            
 
-            <li >
-              <Link to="/contact" className="nav-link" >
+            <li>
+              <NavLink to="/contact" className="nav-NavLink">
                 Contact
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

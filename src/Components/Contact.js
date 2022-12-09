@@ -13,6 +13,7 @@ export default function Contact() {
               ><a href="mailto: ritikraj025@gmail.com"  target="_blank" rel="noopener noreferrer">ritikraj025@gmail.com</a> 
             </p>
             <p className="links">Or Find me on:</p>
+            <div className="link-icon">
             <a href="https://www.linkedin.com/in/ritikraj2227" target="_blank" rel="noopener noreferrer"
               ><i className="fab fa-linkedin">Linkedin</i></a
             >
@@ -22,8 +23,9 @@ export default function Contact() {
             <a
               href="https://www.instagram.com/_haters._.hate._.2227_?r=nametag"
               target="_blank" rel="noopener noreferrer"
-              ><i className="fab fa-instagram">Instagram</i></a
-            >
+              ><i className="fab fa-instagram">Instagram</i></a>
+            </div>
+            
           </div>
         </div>
       </div>
