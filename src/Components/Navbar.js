@@ -9,7 +9,7 @@ export default function Navbar() {
         <div className="nav-content container">
           <div>
             <h1>
-              <NavLink to="/home" className="nav-brand" id="navbar-brand">
+              <NavLink to="/" className="nav-brand" id="navbar-brand">
                 Ritik Raj
               </NavLink>
             </h1>
